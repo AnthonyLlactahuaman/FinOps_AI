@@ -1,0 +1,39 @@
+# Dependencias principales (LangChain ecosystem)
+langchain==1.2.9
+langchain-core==1.2.9
+langchain-openai==1.1.7
+
+# LangGraph (memoria y agentes)
+langgraph>=1.0.8
+langgraph-checkpoint-postgres>=2.0.0
+psycopg[binary]>=3.1.0
+psycopg-pool>=3.2.0
+
+# Elasticsearch / Vector Store (RAG)
+langchain-elasticsearch==1.0.0
+elasticsearch>=8.0.0
+
+# LlamaIndex (RAG Ley 27287 - Títulos de Valores)
+llama-index-core>=0.10.0
+llama-index-vector-stores-elasticsearch>=0.2.0
+llama-index-embeddings-openai>=0.1.0
+llama-index-llms-openai>=0.1.0
+
+# Procesamiento de datos
+pandas>=3.0.0
+openpyxl>=3.1.5
+
+# Configuración
+python-dotenv>=1.2.1
+pyyaml>=6.0.3
+
+# Async compatibility
+nest_asyncio>=1.5.0
+
+# OpenAI
+openai>=2.17.0
+
+# Backend / Servidor
+Flask>=2.2.0
+gunicorn>=20.1.0
+werkzeug>=2.3.0

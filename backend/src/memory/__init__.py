@@ -1,0 +1,1 @@
+"""Módulo de memoria conversacional"""
