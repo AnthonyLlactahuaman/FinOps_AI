@@ -5,29 +5,13 @@ Un agente de inteligencia artificial conversacional diseñado para analizar dato
 ---
 
 ## 📐 Arquitectura General
-
-```
-┌──────────────────────┐         HTTPS          ┌──────────────────────────┐
-│   Frontend           │ ─────────────────────► │   Backend (Flask/Gunicorn)│
-│   Next.js 15 + Auth  │  GET /agent?msg=&id=   │   FinOps AI Agent        │
-│   Cloud Run          │ ◄───────────────────── │   Cloud Run              │
-└──────────────────────┘       JSON response    └──────────┬───────────────┘
-                                                           │
-                    ┌──────────────────────────────────────┼────────────────────────┐
-                    │                                      │                        │
-          ┌─────────▼─────────┐               ┌───────────▼──────┐    ┌────────────▼────────┐
-          │  OpenAI GPT-4.1   │               │  PostgreSQL       │    │  Elasticsearch       │
-          │  (LLM + Embeddings│               │  (Cloud SQL)      │    │  Vector DB (VM)      │
-          │   )               │               │  Memoria /        │    │  RAG Ley 27287       │
-          └───────────────────┘               │  Checkpoints      │    └─────────────────────┘
-                                              └──────────────────┘
-```
+<img src="archivos_extras/Proyecto_FInsOps.png" width="1200">
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-### Backend (`FinsOps_AI_Agent_v1/`)
+### Backend (`backend/`)
 
 | Categoría | Tecnología |
 |-----------|-----------|
@@ -65,7 +49,7 @@ Un agente de inteligencia artificial conversacional diseñado para analizar dato
 Proyecto/
 ├── README.md                          ← Este archivo
 │
-├── FinsOps_AI_Agent_v1/               ← Backend (API REST del agente)
+├── backend/                           ← Backend (API REST del agente)
 │   ├── Dockerfile                     ← Imagen Docker con Python 3.9 + Gunicorn
 │   ├── main.py                        ← Entry point: Flask app + endpoints
 │   ├── requirements.txt               ← Dependencias Python
@@ -131,7 +115,7 @@ Proyecto/
 
 #### 1. Construir la imagen Docker
 
-Desde la carpeta `FinsOps_AI_Agent_v1/`, ejecutar:
+Desde la carpeta `backend/`, ejecutar:
 
 ```bash
 gcloud builds submit --tag us-west2-docker.pkg.dev/{id proyecto}/finops/imagen_backend:latest
@@ -264,7 +248,7 @@ python main.py --cli
 
 | Tipo de consulta | Ejemplo |
 |-----------------|---------|
-| Presupuesto vs ejecución | `"¿Cuál es el presupuesto vs ejecución de la gerencia de TI?"` |
+| Presupuesto vs ejecución | `"¿Cuál es el presupuesto vs ejecución de la gerencia de Operaciones?"` |
 | Variaciones de gasto | `"Muéstrame las 5 mayores variaciones de presupuesto del país Colombia"` |
 | Tendencia de gastos | `"¿Cómo ha evolucionado el gasto del proyecto XYZ en los últimos meses?"` |
 | Consulta legal | `"¿Qué establece la Ley 27287 sobre el endoso de una letra de cambio?"` |
@@ -275,7 +259,7 @@ python main.py --cli
 
 ## 🔑 Variables de Entorno
 
-### Backend (`.env` en `FinsOps_AI_Agent_v1/`)
+### Backend (`.env` en `backend/`)
 
 | Variable | Descripción |
 |----------|-------------|
