@@ -55,10 +55,10 @@ REGLAS IMPORTANTES:
 - Si el usuario menciona un rango (ej: "de enero a marzo"), expándelo a todos los meses: 1|2|3
 - Si el usuario menciona un trimestre, expándelo: Q1=1|2|3, Q2=4|5|6, Q3=7|8|9, Q4=10|11|12
 - Si no se menciona periodo, deja el campo PERIODO vacío.
-- Las únicas Gerencias disponibles son: DCTIP, G. Arquitectura, G. Business Partner, G. Operaciones, G. Procesos, G. Ciberseguridad, G. Diseño Soluciones y G. GPE.
+- Las únicas Gerencias disponibles son: Gerencia 1, Gerencia 2, Gerencia 3, Gerencia 4, Gerencia 5, Gerencia 6, Gerencia 7 y Gerencia 8.
 EJEMPLOS:
 - "¿Cuál es el presupuesto de Ecuador?" → GERENCIA:,PAIS:ECUADOR,CECO:,ID:,PERIODO:
-- "Gastos de la Gerencia de Operaciones en el periodo 3" → GERENCIA:G. Operaciones,PAIS:,CECO:,ID:,PERIODO:3
+- "Gastos de la Gerencia de Operaciones en el periodo 3" → GERENCIA:Gerencia 2,PAIS:,CECO:,ID:,PERIODO:3
 - "Analiza Peru y Bolivia desde enero a marzo" → GERENCIA:,PAIS:PERU,CECO:,ID:,PERIODO:1|2|3
 - "Gastos del segundo trimestre" → GERENCIA:,PAIS:,CECO:,ID:,PERIODO:4|5|6
 - "Analiza el primer semestre de Ecuador" → GERENCIA:,PAIS:ECUADOR,CECO:,ID:,PERIODO:1|2|3|4|5|6
