@@ -93,6 +93,9 @@ Proyecto/
                     └── [...nextauth]/ ← Configuración de rutas OAuth (Google)
 ```
 
+> [!NOTE]
+> 📊 Los datos usados en los archivos Excel (`data/`) son **ficticios y creados manualmente** con fines académicos y demostrativos. No representan información financiera real.
+
 ---
 
 ## ☁️ Despliegue en Google Cloud Run
@@ -248,7 +251,7 @@ python main.py --cli
 
 | Tipo de consulta | Ejemplo |
 |-----------------|---------|
-| Presupuesto vs ejecución | `"¿Cuál es el presupuesto vs ejecución de la gerencia de Operaciones?"` |
+| Presupuesto vs ejecución | `"¿Cuál es el presupuesto vs ejecución de la gerencia 1?"` |
 | Variaciones de gasto | `"Muéstrame las 5 mayores variaciones de presupuesto del país Colombia"` |
 | Tendencia de gastos | `"¿Cómo ha evolucionado el gasto del proyecto XYZ en los últimos meses?"` |
 | Consulta legal | `"¿Qué establece la Ley 27287 sobre el endoso de una letra de cambio?"` |
