@@ -2,6 +2,8 @@
 
 Un agente de inteligencia artificial conversacional diseñado para analizar datos financieros de proyectos (FinOps), responder consultas sobre presupuesto vs. ejecución, variaciones de gasto y normativa legal peruana (Ley 27287 – Títulos de Valores). El sistema está compuesto por un **backend** expuesto como API REST y un **frontend** web con autenticación Google, ambos desplegados en **Google Cloud Run**.
 
+[![Demo](archivos_extras/miniatura.png)](https://youtu.be/Vf3wiZjVEfc)
+
 ---
 
 ## 📐 Arquitectura General
